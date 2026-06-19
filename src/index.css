@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* ── Custom base styles ─────────────────────────────────── */
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: theme(--color-slate-900);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: theme(--color-slate-700);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: theme(--color-slate-600);
+  }
+}
